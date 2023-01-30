@@ -1,0 +1,128 @@
+<html>
+<head>
+  <title>Project-C</title>
+  <style>
+    .center {
+      text-align: center;
+    }
+    .right-bottom {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1><em><strong>Project-C</strong></em></h1>
+    <br>
+    <select id="searchEngine">
+      <option value="google.com">Google</option>
+      <option value="bing.com">Bing</option>
+      <option value="yahoo.com">Yahoo</option>
+      <option value="duckduckgo.com">DuckDuckGo</option>
+      <option value="youtube.com">YouTube</option>
+    </select>
+    <br><br>
+    <input type="text" placeholder="Search" id="searchTerm">
+    <br><br>
+    <label for="trackingBlocker">Tracking Blocker:</label>
+    <input type="checkbox" id="trackingBlocker">
+    <br><br>
+    <label for="safeTab">Safe Tab:</label>
+    <input type="checkbox" id="safeTab">
+    <br><br>
+    <button onclick="search()">Search</button>
+  </div>
+  <div class="right-bottom">
+    Made by Jr
+  </div>
+  <script>
+    function search() {
+      const searchEngine = document.getElementById("searchEngine").value;
+      const searchTerm = document.getElementById("searchTerm").value;
+      const safeTab = document.getElementById("safeTab").checked;
+
+      let searchUrl;
+      if (searchEngine === "youtube.com") {
+        searchUrl = `https://www.${searchEngine}/results?search_query=${searchTerm}`;
+      } else {
+        searchUrl = `https://www.${searchEngine}/search?q=${searchTerm}`;
+      }
+
+      let windowFeatures = "_blank";
+      if (safeTab) {
+        windowFeatures = "private,_blank";
+      }
+
+      window.open(searchUrl, windowFeatures);
+    }
+  </script>
+</body>
+</html>
+
+
+<div style="text-align:center;">
+  <h6>Alpha Version 0.1</h6>
+</div>
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <style>
+      #vip-code {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+      }
+      #buttons {
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vip-code">
+      <input type="text" id="vip-input">
+    </div>
+    <div id="buttons">
+      <button id="enter-button">Enter</button>
+      <button id="vip-button" style="display:none">Vip Member</button>
+    </div>
+
+    <script>
+      const input = document.querySelector('#vip-input');
+      const enterButton = document.querySelector('#enter-button');
+      const vipButton = document.querySelector('#vip-button');
+
+      enterButton.addEventListener('click', function() {
+        if (input.value === '19079354SMP') {
+          vipButton.style.display = 'inline-block';
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+                        
+
+
+
+
+
+
+
+
+
